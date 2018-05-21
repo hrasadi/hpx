@@ -438,7 +438,10 @@ namespace hpx { namespace components { namespace server { namespace detail
         HPX_DEFINE_COMPONENT_ACTION(memory_block, clone);
 
         // This component type requires valid id for its actions to be invoked
-        static bool is_target_valid(naming::id_type const& id) { return true; }
+        HPX_CONSTEXPR static bool is_target_valid(naming::id_type const& id)
+        {
+            return true;
+        }
     };
 }}}}
 
